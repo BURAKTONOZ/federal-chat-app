@@ -15,17 +15,28 @@
   color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; /* Sayfa scrollunu kapatır */
+}
+html {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 header {
   background: #075e54;
   color: white;
   padding: 16px 24px;
+  padding-top: calc(16px + env(safe-area-inset-top));
   text-align: center;
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 1.2px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
 #chat {
